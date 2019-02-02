@@ -1,0 +1,10 @@
+{% extends "project/layout.html" %}
+{% block content %}
+<h1>count</h1>
+<p>단어 갯수 : {{len}} 개</p>
+<ul>
+  {% for k,v in dicts.items %}
+  <li>{{k}} : {{v}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

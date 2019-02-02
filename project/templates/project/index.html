@@ -1,0 +1,13 @@
+{% extends "project/layout.html" %}
+{% block content %}
+<h1>count words</h1>
+<form class="col" action="{% url 'count'%}" method="post">
+  {% csrf_token %}
+  <div class="input-group mb-3">
+    <textarea type="text" class="form-control" name="words" rows="4"></textarea>
+    <div class="input-group-append">
+      <button class="btn btn-outline-success" type="submit">Count</button>
+    </div>
+  </div>
+</form>
+{% endblock %}
